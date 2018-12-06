@@ -27,7 +27,7 @@ def grab_initial_state_data():
 	
 	print(main_df.head()) 
 
-	# Printing out Pickle
+	# Printing out PickleB
 	pickle_out = open('fiddy_states.pickle','wb')
 	pickle.dump(main_df, pickle_out)
 	pickle_out.close()
@@ -43,7 +43,6 @@ ax1 = plt.subplot2grid((1,1)(0,0))
 HPI_data - pd.read_pickle('fiddy_states')
 
 TX1yr = HPI_data['TX'].resample('A', how = 'mean')
-print(TX1yr.head())
 
 HPI_data['TX'].plot(ax = ax1)
 TX1yr.plot(ax=ax1)
