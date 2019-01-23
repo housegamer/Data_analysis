@@ -3,10 +3,10 @@ import pandas as pd
 
 
 api_key = open('api_key.txt').read()
-'''df = quandl.get('YALE/RBCI', authtoken=api_key)
-print(df.head())'''
+df = quandl.get('FRED/NROUST', authtoken=api_key)
+print(df.head())
 
-fitty_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
+#fitty_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._states')
 
 # This gives you a list of the page
 #print(fitty_states)
@@ -17,5 +17,8 @@ fitty_states = pd.read_html('https://simple.wikipedia.org/wiki/List_of_U.S._stat
 # This is a column
 #print(fitty_states[0][0])
 
-for abbri in fitty_states[0][1][1]:
-	print('YALE-RBCI' +str(abbri))
+for abbri in fitty_states[0][1][1:]:
+	print('FRED/NROUST_' +str(abbri))
+
+
+

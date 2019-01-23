@@ -18,7 +18,7 @@ print(df.head())
 '''
 
 
-# renaming columns
+'''# renaming columns
 df.columns = [2,'Austing_HPI','White','Blah']
 print(df.head()) 
 
@@ -30,8 +30,8 @@ df.to_csv('newcsv4.csv', header=False)
 
 # reading a csv with no header
 df = pd.read_csv('newcsv4.csv', names=['Date', 'Cost Index', 'U.S. Population(Millions)', 'Long Rate'], )
-print(df.head())
+print(df.head())'''
 
 # converting to html format/table
-df.to_json('example.json') 
+#df.to_json('example.json') 
 
